@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#test2"> Profile</a></li>
+        <li class="tab col s3 "><a href="#test3">Income Statement</a></li>
+        <li class="tab col s3"><a href="#test4">Balance Statement</a></li>
+      </ul>
+    </div>
+    <div id="test2" class="col s12" style="margin-top: 30px"> 
+        <div style="display: flex;">
+            <img id="image" alt="logo" style="margin-right: 50px; margin-bottom: 50px;">
+            <p id="description"></p>
+        </div>
+        <div class="collection">
+            <a id="a_companyName" class="collection-item"></a>
+            <a id="a_symbol" class="collection-item"></a>
+            <a id="a_exchange" class="collection-item"></a>
+            <a id="a_industry" class="collection-item"></a>
+            <a id="a_sector" class="collection-item"></a>
+            <a id="a_ceo" class="collection-item"></a>
+            <a id="a_price" class="collection-item"></a>
+            <a id="a_beta" class="collection-item"></a>
+            <a id="a_volavg" class="collection-item"></a>
+            <a id="a_mkt" class="collection-item"></a>
+            <a id="a_last" class="collection-item"></a>
+            <a id="a_range" class="collection-item"></a>
+            <a id="a_changes" class="collection-item"></a>
+            <a id="a_changesPercentage" class="collection-item"></a>
+            <a id="a_website" target="_blank" class="collection-item" style="color:red"></a>
+          </div>
+    </div>
+    <div id="test3" class="col s12">
+        <div class="input-field col s12" style='margin-bottom: 50px;'>
+            <select id="income_chart">
+              <option value="Revenue" selected>Revenue</option>
+              <option value="Gross Profit">Gross Profit</option>
+              <option value="R&D Expenses">R&D Expenses</option>
+              <option value="SG&A Expense">SG&A Expense</option>
+              <option value="Operating Expenses">Operating Expenses</option>
+              <option value="Operating Income">Operating Income</option>
+              <option value="Interest Expense">Interest Expense</option>
+              <option value="Earnings before Tax">Earnings before Tax</option>
+              <option value="Income Tax Expense">Income Tax Expense</option>
+              <option value="Net Income">Net Income</option>
+              <option value="Weighted Average Shs Out">Weighted Average Shs Out</option>
+            </select>
+            <label>Income Statement</label>
+          </div>        
+        <canvas id="income_statement"></canvas>
+    </div>
+    <div id="test4" class="col s12">
+        <div class="input-field col s12" style='margin-bottom: 50px;'>
+            <select id="balance_chart">
+              <option value="Cash and cash equivalents" selected>Cash and cash equivalents</option>
+              <option value="Short-term investments">Short-term investments</option>
+              <option value="Long-term investments">Long-term investments</option>
+              <option value="Receivables">Receivables</option>
+              <option value="Payables">Payables</option>
+              <option value="Inventories">Inventories</option>
+              <option value="Property, Plant & Equipment Net">Property, Plant & Equipment Net</option>
+              <option value="Short-term debt">Short-term debt</option>
+              <option value="Long-term debt">Long-term debt</option>
+              <option value="Deferred revenue">Deferred revenue</option>
+              <option value="Tax Liabilities">Tax Liabilities</option>
+              <option value="Other comprehensive income">Other comprehensive income</option>
+              <option value="Total shareholders equity">Total shareholders equity</option>
+              <option value="Investments">Investments</option>
+            </select>
+            <label>Balance Sheet Statement</label>
+          </div>        
+        <canvas id="balance_statement"></canvas>
+    </div>
+  </div>

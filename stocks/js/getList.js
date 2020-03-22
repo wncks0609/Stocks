@@ -12,23 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById("getAllCards").appendChild(getAllCards('https://financialmodelingprep.com/api/v3/company/stock/list'));
 
-    let elems = document.querySelectorAll('.autocomplete');
-    let options = createOptions(symbols_list);
-    let instances = M.Autocomplete.init(elems, options);
-
     document.getElementById("loadMore").addEventListener("click", loadMore);
 
     document.getElementById("all").addEventListener('click', () => {
         var list = document.getElementsByTagName("UL")[0];
         var items = list.getElementsByTagName("li");
     
-        for (var i = 0; i < items.length; ++i) {
+        for (var i = 0; i < items.length; i++) {
             if(items[i].classList.contains("active")) {
                 items[i].classList.remove('active');
             }
         }
         document.getElementById("all").classList.add("active");
         document.getElementById("title").innerHTML = "All Stock";
+        document.getElementById("search").value = "";
 
         document.getElementById("getAllCards").innerHTML = '';
         document.getElementById("getAllCards").appendChild(render_cards(symbols_list));
@@ -123,6 +120,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let symbols_text = getAllCards_resquest(url);
         symbols_list = JSON.parse(symbols_text.responseText).symbolsList;
 
+        let elems = document.querySelectorAll('.autocomplete');
+        let options = createOptions(symbols_list);
+        let instances = M.Autocomplete.init(elems, options);
+
         return render_cards(symbols_list);
     }
 
@@ -143,9 +144,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let option = new Object();
         option.data = new Object();
         option.limit = 5;
-        for(let i = 0; i < list.length; i++) {
+
+        let i = 0; 
+        while(i < list.length) {
             option.data[list[i].name] = null;
+            i++;
         }
+
         return option;
     }
 
@@ -175,8 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
             card.appendChild(card_content);
             parent.insertBefore(card,loadMore);
         }
-
-
     }
 
 })

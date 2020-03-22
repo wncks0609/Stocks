@@ -7,13 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
         var list = document.getElementsByTagName("UL")[0];
         var items = list.getElementsByTagName("li");
     
-        for (var i = 0; i < items.length; ++i) {
+        for (var i = 0; i < items.length; i++) {
             if(items[i].classList.contains("active")) {
                 items[i].classList.remove('active');
             }
         }
         document.getElementById("actives").classList.add("active");
         document.getElementById("title").innerHTML = "Most Actives";
+        document.getElementById("search").value = "";
 
         document.getElementById("getAllCards").innerHTML = '';
         document.getElementById("getAllCards").appendChild(getActives('https://financialmodelingprep.com/api/v3/stock/actives'));
