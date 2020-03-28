@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("search").addEventListener('change', getSearch);
 
     function getSearch() {
+        createSortOption('hide');
         if(userInput_flag) {
             userInput_flag = false;
             let input = document.getElementById("search").value;
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById("search").value = "";
 
             if(!symbol) {
+                document.getElementById("getAllCards").innerHTML = '';
                 document.getElementById("title").innerHTML = "Sorry! Could not find about " +input;
             } else {
                 
@@ -41,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 var element = document.querySelectorAll('select');
                 M.FormSelect.init(element);
+                
                 document.getElementById("income_chart").addEventListener('change', update_income_Chart);
                 document.getElementById("balance_chart").addEventListener('change', update_balance_Chart);
 

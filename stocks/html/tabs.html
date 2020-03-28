@@ -1,12 +1,12 @@
 <div class="row">
-    <div class="col s12">
+    <div class="col s6">
       <ul class="tabs">
-        <li class="tab col s3"><a href="#test2"> Profile</a></li>
-        <li class="tab col s3 "><a href="#test3">Income Statement</a></li>
-        <li class="tab col s3"><a href="#test4">Balance Statement</a></li>
+        <li class="tab col s3"><a href="#profile_tab"> Profile</a></li>
+        <li class="tab col s3 "><a href="#income_statement_tab">Income Statement</a></li>
+        <li class="tab col s3"><a href="#balance_statement_tab">Balance Statement</a></li>
       </ul>
     </div>
-    <div id="test2" class="col s12" style="margin-top: 30px"> 
+    <div id="profile_tab" class="col s6" style="margin-top: 30px"> 
         <div style="display: flex;">
             <img id="image" alt="logo" style="margin-right: 50px; margin-bottom: 50px;">
             <p id="description"></p>
@@ -29,8 +29,8 @@
             <a id="a_website" target="_blank" class="collection-item" style="color:red"></a>
           </div>
     </div>
-    <div id="test3" class="col s12">
-        <div class="input-field col s12" style='margin-bottom: 50px;'>
+    <div id="income_statement_tab" class="col s6">
+        <div class="input-field col s6" style='margin-bottom: 50px;'>
             <select id="income_chart">
               <option value="Revenue" selected>Revenue</option>
               <option value="Gross Profit">Gross Profit</option>
@@ -48,8 +48,8 @@
           </div>        
         <canvas id="income_statement"></canvas>
     </div>
-    <div id="test4" class="col s12">
-        <div class="input-field col s12" style='margin-bottom: 50px;'>
+    <div id="balance_statement_tab" class="col s6">
+        <div class="input-field col s6" style='margin-bottom: 50px;'>
             <select id="balance_chart">
               <option value="Cash and cash equivalents" selected>Cash and cash equivalents</option>
               <option value="Short-term investments">Short-term investments</option>
